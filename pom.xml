@@ -93,6 +93,17 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<version>2.4.10</version>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>3.2.0</version>
+				<!-- Add the following exclusions here. -->
+				<configuration>
+					<nonFilteredFileExtensions>
+						<nonFilteredFileExtension>properties</nonFilteredFileExtension>
+					</nonFilteredFileExtensions>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 
