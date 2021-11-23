@@ -38,7 +38,12 @@ public class SecurityConfigurations extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.userDetailsService(autenticacaoService).passwordEncoder(bCryptPasswordEncoder);
+        //auth.userDetailsService(autenticacaoService).passwordEncoder(bCryptPasswordEncoder);
+
+        auth.inMemoryAuthentication()
+                .withUser("user").password("{noop}password").roles("USER")
+                .and()
+                .withUser("admin").password("{noop}password").roles("ADMIN");
     }
 
     @Override
@@ -66,7 +71,7 @@ public class SecurityConfigurations extends WebSecurityConfigurerAdapter {
      * rita 805065
      */
 
-    public static void main(String[] args) {
-        System.out.println(new BCryptPasswordEncoder().encode("805065"));
-    }
+//    public static void main(String[] args) {
+//        System.out.println(new BCryptPasswordEncoder().encode("805065"));
+//    }
 }

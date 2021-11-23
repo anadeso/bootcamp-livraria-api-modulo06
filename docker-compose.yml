@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  livraria_database:
+    image: mysql:8.0
+    restart: always
+    expose:
+      - 3306
+    security_opt:
+      - seccomp:unconfined
+    env_file:
+      - livraria_database.env
+
+  livraria_app:
+    image: bootcampalura/livraria-api
+    restart: always
+    ports:
+      - 8080:8080
+    depends_on:
+      - livraria_database
+    env_file:
+      - livraria_app.env
