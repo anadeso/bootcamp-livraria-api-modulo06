@@ -126,11 +126,11 @@ public class LivroRepositoryTest {
                 .hasSize(5)
                 .extracting(ItemAutorDto::getAutor, ItemAutorDto::getQuantidadeLivros, ItemAutorDto::getPercentual)
                 .containsExactlyInAnyOrder(
-                        Assertions.tuple("André da Silva", 2l, 0.285714),
-                        Assertions.tuple("Fernanda Nogueira", 2l, 0.285714),
-                        Assertions.tuple("Juliana Carvalho", 1l, 0.142857),
-                        Assertions.tuple("Rita", 1l, 0.142857),
-                        Assertions.tuple("Rodrigo de Souza", 1l, 0.142857)
+                        Assertions.tuple("André da Silva", 2l, 0.2857142857142857),
+                        Assertions.tuple("Fernanda Nogueira", 2l,  0.2857142857142857),
+                        Assertions.tuple("Juliana Carvalho", 1l, 0.14285714285714285),
+                        Assertions.tuple("Rita", 1l, 0.14285714285714285),
+                        Assertions.tuple("Rodrigo de Souza", 1l ,0.14285714285714285)
                 );
     }
 
