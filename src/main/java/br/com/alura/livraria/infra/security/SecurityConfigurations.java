@@ -32,18 +32,18 @@ public class SecurityConfigurations extends WebSecurityConfigurerAdapter {
 
     @Override
     @Bean
-    protected AuthenticationManager authenticationManager() throws Exception {
-        return super.authenticationManager();
+    public AuthenticationManager authenticationManagerBean() throws Exception {
+        return super.authenticationManagerBean();
     }
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        //auth.userDetailsService(autenticacaoService).passwordEncoder(bCryptPasswordEncoder);
+        auth.userDetailsService(autenticacaoService).passwordEncoder(bCryptPasswordEncoder);
 
-        auth.inMemoryAuthentication()
-                .withUser("user").password("{noop}password").roles("USER")
-                .and()
-                .withUser("admin").password("{noop}password").roles("ADMIN");
+//        auth.inMemoryAuthentication()
+//                .withUser("user").password("{noop}password").roles("USER")
+//                .and()
+//                .withUser("admin").password("{noop}password").roles("ADMIN");
     }
 
     @Override
@@ -51,6 +51,7 @@ public class SecurityConfigurations extends WebSecurityConfigurerAdapter {
         http
            .authorizeRequests()
            .antMatchers(HttpMethod.POST, "/auth").permitAll()
+           .antMatchers(HttpMethod.GET, "/home").permitAll()
            .antMatchers( "/usuarios/**").hasRole("ADMIN")
            .anyRequest().authenticated()
            .and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
