@@ -1,6 +1,5 @@
 br/com/alura/livraria/resources/AutorResourceTest.class
 br/com/alura/livraria/service/LivroServiceTest.class
 br/com/alura/livraria/repository/LivroRepositoryTest.class
-br/com/alura/livraria/LivrariaApiApplicationTests.class
 br/com/alura/livraria/resources/LivroResourceTest.class
 br/com/alura/livraria/service/AutorServiceTest.class

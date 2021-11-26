@@ -36,3 +36,4 @@
 /Users/anasousa/Documents/Documents/Documentos - MacBook Pro de Ana/Estudos/Java/Bootcamp - Alura/bootcamp-livraria-modulo06/livraria-api/src/main/java/br/com/alura/livraria/infra/TratamentoDeErros.java
 /Users/anasousa/Documents/Documents/Documentos - MacBook Pro de Ana/Estudos/Java/Bootcamp - Alura/bootcamp-livraria-modulo06/livraria-api/src/main/java/br/com/alura/livraria/dto/AtualizacaoLivroFormDto.java
 /Users/anasousa/Documents/Documents/Documentos - MacBook Pro de Ana/Estudos/Java/Bootcamp - Alura/bootcamp-livraria-modulo06/livraria-api/src/main/java/br/com/alura/livraria/infra/security/AutenticacaoService.java
+/Users/anasousa/Documents/Documents/Documentos - MacBook Pro de Ana/Estudos/Java/Bootcamp - Alura/bootcamp-livraria-modulo06/livraria-api/src/main/java/br/com/alura/livraria/resources/HomeResource.java

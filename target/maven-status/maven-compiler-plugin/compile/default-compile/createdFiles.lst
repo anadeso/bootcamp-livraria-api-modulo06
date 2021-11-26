@@ -11,6 +11,7 @@ br/com/alura/livraria/service/AutorService.class
 br/com/alura/livraria/dto/Erro500Dto.class
 br/com/alura/livraria/infra/security/SecurityConfigurations.class
 br/com/alura/livraria/service/TokenService.class
+br/com/alura/livraria/resources/HomeResource.class
 br/com/alura/livraria/service/LivroService.class
 br/com/alura/livraria/dto/AutorFormDto.class
 br/com/alura/livraria/LivrariaApiApplication.class
