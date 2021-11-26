@@ -91,7 +91,7 @@ public class LivroResourceTest {
 
         String json = "{\"titulo\":\"Aprenda Python em 12 dias\",\"dataLancamento\" : \"01/01/2012\",\"numeroPagina\" : \"110\",\"autor_id\" :" + autor.getId() + " ,\"autor\" : {\"nome\": \"André da Silva\"}}";
 
-        String jsonRetorno = "{\"titulo\": \"Aprenda Python em 12 dias\",\"dataLancamento\": \"01/01/2012\",\"numeroPagina\": 110,\"autor\": {\"nome\": \"André da Silva\",\"email\": \"andre@gmail.com\",\"dataNascimento\": \"25/11/2021\"}}";
+        String jsonRetorno = "{\"titulo\": \"Aprenda Python em 12 dias\",\"dataLancamento\": \"01/01/2012\",\"numeroPagina\": 110,\"autor\": {\"nome\": \"André da Silva\",\"email\": \"andre@gmail.com\",\"dataNascimento\": \"26/11/2021\"}}";
 
         mvc
                 .perform(MockMvcRequestBuilders
