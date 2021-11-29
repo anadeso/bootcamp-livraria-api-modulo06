@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.test.context.ActiveProfiles;
 
 @Service
-@ActiveProfiles("default")
+@ActiveProfiles({"default", "test"})
 public class EnviadorEmailFake implements EnviadorDeEmail {
 
     @Async
