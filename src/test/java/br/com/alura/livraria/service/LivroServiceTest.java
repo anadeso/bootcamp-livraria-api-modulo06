@@ -33,7 +33,7 @@ public class LivroServiceTest {
 
     @BeforeEach
     public void before() {
-        this.logado = new Usuario("Rodrigo", "rodrigo", "123455");
+        this.logado = new Usuario("Rodrigo", "rodrigo", "123455", "andre@gmail.com");
     }
 
     @Test

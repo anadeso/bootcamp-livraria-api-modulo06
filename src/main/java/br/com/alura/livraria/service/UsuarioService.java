@@ -4,6 +4,8 @@ import br.com.alura.livraria.dto.UsuarioDto;
 import br.com.alura.livraria.dto.UsuarioFormDto;
 import br.com.alura.livraria.entities.Perfil;
 import br.com.alura.livraria.entities.Usuario;
+import br.com.alura.livraria.infra.EnviadorDeEmail;
+import br.com.alura.livraria.infra.EnviadorEmail;
 import br.com.alura.livraria.repositories.PerfilRepository;
 import br.com.alura.livraria.repositories.UsuarioRepository;
 import org.modelmapper.ModelMapper;
@@ -31,6 +33,9 @@ public class UsuarioService {
     @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
+    @Autowired
+    private EnviadorDeEmail enviadorEmail;
+
     @Transactional(readOnly = true)
     public Page<UsuarioDto> listar(Pageable paginacao) {
         Page<Usuario> usuarios = usuarioRepository.findAll(paginacao);
@@ -49,6 +54,16 @@ public class UsuarioService {
         usuario.setSenha(bCryptPasswordEncoder.encode(senha));
 
         usuarioRepository.save(usuario);
+
+        String destinatario = usuario.getEmail();
+        String assunto = "Livraria - Bem Vindo(a)";
+        String mensagem = String.format("Olá %s!\n\n" +
+                        "Segue seus dados de sistema livraria:" +
+                        "\nLoging:%s" +
+                        "\nSenha:%s", usuario.getNome(), usuario.getLogin(), senha);
+
+        enviadorEmail.enviarEmail(destinatario, assunto, mensagem);
+
         return modelMapper.map(usuario, UsuarioDto.class);
     }
 

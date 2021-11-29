@@ -61,7 +61,7 @@ public class LivroResourceTest {
     @BeforeEach
     public void gerarToken() {
         // Criando user com perfil admin e salvando no banco
-        Usuario logado = new Usuario("Rodrigo", "rodrigo", "501065");
+        Usuario logado = new Usuario("Rodrigo", "rodrigo", "501065", "andre@gmail.com");
         Perfil admin = perfilRepository.findById(1l).get();
         logado.adicionarPerfil(admin);
         usuarioRepository.save(logado);
@@ -91,7 +91,7 @@ public class LivroResourceTest {
 
         String json = "{\"titulo\":\"Aprenda Python em 12 dias\",\"dataLancamento\" : \"01/01/2012\",\"numeroPagina\" : \"110\",\"autor_id\" :" + autor.getId() + " ,\"autor\" : {\"nome\": \"André da Silva\"}}";
 
-        String jsonRetorno = "{\"titulo\": \"Aprenda Python em 12 dias\",\"dataLancamento\": \"01/01/2012\",\"numeroPagina\": 110,\"autor\": {\"nome\": \"André da Silva\",\"email\": \"andre@gmail.com\",\"dataNascimento\": \"26/11/2021\"}}";
+        String jsonRetorno = "{\"titulo\": \"Aprenda Python em 12 dias\",\"dataLancamento\": \"01/01/2012\",\"numeroPagina\": 110,\"autor\": {\"nome\": \"André da Silva\",\"email\": \"andre@gmail.com\",\"dataNascimento\": \"29/11/2021\"}}";
 
         mvc
                 .perform(MockMvcRequestBuilders

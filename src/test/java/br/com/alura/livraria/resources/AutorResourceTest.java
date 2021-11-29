@@ -45,7 +45,7 @@ public class AutorResourceTest {
     @BeforeEach
     public void gerarToken() {
         // Criando user com perfil admin e salvando no banco
-        Usuario logado = new Usuario("Rodrigo", "rodrigo", "501065");
+        Usuario logado = new Usuario("Rodrigo", "rodrigo", "501065", "andre@gmail.com");
         Perfil admin = perfilRepository.findById(1l).get();
         logado.adicionarPerfil(admin);
         usuarioRepository.save(logado);
