@@ -33,7 +33,6 @@ public class AutenticacaoService implements UserDetailsService {
         //Autenticar, quando valido, gera token e devolver token
         Authentication authentication = new UsernamePasswordAuthenticationToken(dto.getLogin(), dto.getSenha());
         authentication = authenticationManager.authenticate(authentication);
-
         return tokenService.gerarToken(authentication);
     }
 }
