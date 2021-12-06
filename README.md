@@ -13,18 +13,29 @@ Git, Swagger, JUnit, Docker, Heroku e CI/CD utilizando GitHub Actions para desen
   - Quantidade Livros publicados
   - Percentual
 - [x] Tratamento erros APIs
-  - 400, 404 e 500
+  - 400
+  - 404
+  - 500
 - [x] Teste automatizados
-- [x] Adicionando Swagger
-- [x] Spring Security com JJWT
-- [x] Docker empacotando Api
-- [x] Deploy Heroku
-- [x] Integração Contínua e Deploy Contínuo(CI/CD) 
- 
+
 ### 🚀 Resultado
 https://user-images.githubusercontent.com/19472198/144836418-a1be3244-5be6-4e6d-9c1f-9f947315b4fe.mov
 
-
+### Tecnologias
+- [x] Spring Boot
+  - Spring Web
+  - Spring Validation
+- [x] Hibernate 
+- [x] Flyway 
+- [x] MySQL 
+- [x] Postman
+- [x] JUnit
+- [x] Swagger
+- [x] Spring Security com JJWT
+- [x] Docker
+- [x] Deploy Heroku
+- [x] Integração Contínua e Deploy Contínuo(CI/CD) com GitHub Actions
+  
 ### Autor
 ---
 Feito com ❤️ por Ana Sousa 👋🏽 Entre em contato!
