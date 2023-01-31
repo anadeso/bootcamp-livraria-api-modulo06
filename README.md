@@ -1,7 +1,16 @@
-#  👩🏻‍💻 Bootcamp Alura - API Rest com Spring Boot
+#  👩🏻‍💻 Bootcamp Java
 
-<p>Implementado uma API Rest de uma Livraria, utilizando também diversas outras bibliotecas e especificações, tais como: JPA, ModelMapper, Lombok, Bean Validation, 
-Git, Swagger, JUnit, Docker, Heroku e CI/CD utilizando GitHub Actions para desenvolver as funcionalidades que representam as necessidades dos usuários do nosso projeto.
+<p>API Rest em Java utilizando o framework Spring Boot
+
+Módulos para a criação de uma API Rest, utilizando diversas outras bibliotecas e especificações, tais como: 
+- JPA
+- ModelMapper
+- Lombok
+- Bean Validation
+- Git
+- Swagger
+- JUnit
+- Docker
 
 ### 📚 Desenvolvemos
 - [x] CRUD - Autor e Livro
